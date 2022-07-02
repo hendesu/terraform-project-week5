@@ -15,7 +15,7 @@ resource "azurerm_private_dns_zone_virtual_network_link" "default" {
 }
 
 resource "azurerm_postgresql_flexible_server" "postgres-server--staging--" {
-  name                   = "postgresql-server-for-staging"
+  name                   = var.database_name
   resource_group_name    = azurerm_resource_group.rg.name
   location               = azurerm_resource_group.rg.location
   version                = "13"

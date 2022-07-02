@@ -52,3 +52,9 @@ variable "main_pass" {
   sensitive = true
 }
 
+variable "database_name" {
+  default = "postgresql-server-for-staging"
+  type = string
+  sensitive = true
+}
+
