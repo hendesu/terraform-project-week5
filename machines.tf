@@ -1,12 +1,12 @@
 
 resource "azurerm_linux_virtual_machine" "Appserver" {
-  count               = var.machine
+  count               = var.__machine__
   name                = "terraform-app-server${count.index}"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   size                = "Standard_B1s"
-  admin_username      = var.machine_user
-  admin_password      = var.pass_app
+  admin_username      = var.__machine_user__
+  admin_password      = var.__pass_app__
   disable_password_authentication = false
   network_interface_ids = [element(azurerm_network_interface.App-network.*.id,count.index)]
 

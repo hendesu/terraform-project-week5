@@ -1,4 +1,4 @@
-variable "resource_group_name_prefix" {
+variable "__resource_group_name_prefix__" {
   default       = "staging"
   description   = "Prefix of the resource group name."
 }
@@ -8,51 +8,51 @@ variable "resource_group_location" {
   description   = "Location of the resource group."
 }
 
-variable "machine" {
+variable "__machine__" {
   default = 3
 }
 
-variable "name" {
+variable "__name__" {
   default = "postgres-production"
 }
 
-variable "pass_db" {
+variable "__pass_db__" {
   default = "password123"
   type = string
   sensitive = true
 }
 
-variable "pass_app" {
+variable "__pass_app__" {
   default = "abc123"
   type = string
   sensitive = true
 }
 
-variable "machine_user" {
+variable "__machine_user__" {
   default = "tf-app"
   type = string
   sensitive = true
 }
 
-variable "db_user" {
+variable "__db_user__" {
   default = "user"
   type = string
   sensitive = true
 }
 
-variable "main_user" {
+variable "__main_user__" {
   default = "admin"
   type = string
   sensitive = true
 }
 
-variable "main_pass" {
+variable "__main_pass__" {
   default = "pass"
   type = string
   sensitive = true
 }
 
-variable "database_name" {
+variable "__database_name__" {
   default = "postgresql-server-for-staging"
   type = string
   sensitive = true

@@ -1,6 +1,6 @@
 
 resource "azurerm_network_interface" "App-network" {
-  count               = var.machine
+  count               = var.__machine__
   name                = "app-nic${count.index}"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
