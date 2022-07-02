@@ -23,7 +23,7 @@ resource "azurerm_lb_backend_address_pool" "lb-backend" {
 }
 
 resource "azurerm_network_interface_backend_address_pool_association" "vm-lb" {
-  count = var.machine
+  count = "__machine__"
   backend_address_pool_id = azurerm_lb_backend_address_pool.lb-backend.id
   ip_configuration_name = azurerm_network_interface.App-network[count.index].ip_configuration[0].name
   network_interface_id = azurerm_network_interface.App-network[count.index].id

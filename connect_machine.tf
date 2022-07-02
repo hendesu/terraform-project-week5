@@ -1,6 +1,6 @@
 resource "azurerm_linux_virtual_machine" "main" {
-  admin_username = var.__main_user__
-  admin_password = var.__main_pass__
+  admin_username = "__main_user__"
+  admin_password = "__main_pass__"
   location = azurerm_resource_group.rg.location
   name = "main-machine"
   network_interface_ids = [azurerm_network_interface.main-nic.id]
