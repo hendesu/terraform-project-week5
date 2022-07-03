@@ -1,12 +1,16 @@
+variable "resource_group_location" {
+  default = "westeurope"
+  description   = "Location of the resource group."
+}
+
+/*
+
+
 variable "__resource_group_name_prefix__" {
   default       = "staging"
   description   = "Prefix of the resource group name."
 }
 
-variable "resource_group_location" {
-  default = "westeurope"
-  description   = "Location of the resource group."
-}
 
 variable "__machine__" {
   default = 3
@@ -57,4 +61,6 @@ variable "__database_name__" {
   type = string
   sensitive = true
 }
+*/
+
 
